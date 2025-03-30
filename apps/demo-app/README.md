@@ -1,28 +1,97 @@
+# ChatPay-Go-Xion
+
+A modern monorepo project built with TypeScript, Next.js, and React, focused on blockchain and account abstraction.
+
+## Project Structure
+
+This monorepo is organized into two main directories:
+
+### Apps
+
+- `demo-app`: A Next.js application featuring Tailwind CSS for styling
+
+### Packages
+
+- `abstraxion`: A React package for account abstraction on XION
+- `constants`: Utility package for shared constants
+- `signers`: Utility package for account abstraction classes built on cosmjs
+- `ui`: A React component library with Tailwind CSS
+- `eslint-config-custom`: Custom ESLint configurations
+- `tsconfig`: TypeScript configuration files
+
+## Features
+
+- TypeScript for type safety
+- Next.js for modern React applications
+- Tailwind CSS for styling
+- Account abstraction support
+- Modular and reusable components
+- ESLint and Prettier for code quality
+
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js (LTS version)
+- pnpm (package manager)
+
+### Installation
+
+1. Clone the repository
+2. Install dependencies:
 
 ```bash
-yarn dev
+pnpm install
 ```
 
-Open [http://localhost:3001](http://localhost:3001) with your browser to see the result.
+### Development
 
-You can start editing the page by modifying `src/app/page.tsx`. The page auto-updates as you edit the file.
+Run the development server:
 
-To create [API routes](https://nextjs.org/docs/app/building-your-application/routing/router-handlers) add an `api/` directory to the `app/` directory with a `route.ts` file. For individual endpoints, create a subfolder in the `api` directory, like `api/hello/route.ts` would map to [http://localhost:3001/api/hello](http://localhost:3001/api/hello).
+```bash
+pnpm dev
+```
 
-## Learn More
+### Building Packages
 
-To learn more about Next.js, take a look at the following resources:
+The UI package can be built using:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn/foundations/about-nextjs) - an interactive Next.js tutorial.
+```bash
+pnpm build
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+This will output the transpiled source and compiled styles to the `dist/` directory.
 
-## Deploy on Vercel
+### Alternative: Using Source Directly
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_source=github.com&utm_medium=referral&utm_campaign=turborepo-readme) from the creators of Next.js.
+If you prefer to use the packages directly from source without building, update your `tailwind.config.js` to include package locations:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```javascript
+content: [
+  // app content
+  `src/**/*.{js,ts,jsx,tsx}`,
+  // include packages if not transpiling
+  "../../packages/**/*.{js,ts,jsx,tsx}",
+],
+```
+
+## Utilities
+
+The project includes several development utilities:
+
+- [Tailwind CSS](https://tailwindcss.com/) for styling
+- [TypeScript](https://www.typescriptlang.org/) for type checking
+- [ESLint](https://eslint.org/) for code linting
+- [Prettier](https://prettier.io) for code formatting
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a new Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details
