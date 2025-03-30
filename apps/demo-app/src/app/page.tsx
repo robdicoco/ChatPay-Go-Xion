@@ -10,7 +10,7 @@ import {
 import { Button } from "@burnt-labs/ui";
 import "@burnt-labs/ui/dist/index.css";
 import type { InstantiateResult } from "@cosmjs/cosmwasm-stargate";
-import { SignArb } from "../components/sign-arb.tsx";
+import { SignArb } from "../components/sign-arb";
 
 type InstantiateResultOrUndefined = InstantiateResult | undefined;
 
