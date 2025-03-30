@@ -27,16 +27,16 @@ const legacyConfig = {
     },
   ],
   // Optional params to activate mainnet config
-  // rpcUrl: "https://rpc.xion-mainnet-1.burnt.com:443",
-  // restUrl: "https://api.xion-mainnet-1.burnt.com:443",
+  rpcUrl: "https://rpc.xion-testnet-2.burnt.com:443",
+  restUrl: "https://api.xion-testnet-2.burnt.com",
 };
 
 const treasuryConfig = {
-  treasury: "xion13uwmwzdes7urtjyv7mye8ty6uk0vsgdrh2a2k94tp0yxx9vv3e9qazapyu", // Example XION treasury instance for instantiating smart contracts
+  treasury: "xion14ulgpscve2cpjjwkjvqyj4k5uus9s40pjw6dly6vvky7wusvkj9qy99a8h", // Example XION treasury instance for instantiating smart contracts
   gasPrice: "0.001uxion", // If you feel the need to change the gasPrice when connecting to signer, set this value. Please stick to the string format seen in example
   // Optional params to activate mainnet config
-  // rpcUrl: "https://rpc.xion-mainnet-1.burnt.com:443",
-  // restUrl: "https://api.xion-mainnet-1.burnt.com:443",
+  rpcUrl: "https://rpc.xion-testnet-2.burnt.com:443",
+  restUrl: "https://api.xion-testnet-2.burnt.com",
 };
 
 export default function RootLayout({

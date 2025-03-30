@@ -1,43 +1,95 @@
-# xion.js
+# ChatPay-Go-Xion
 
-This is the official xion.js repo.
+A modern monorepo project built with TypeScript, Next.js, and React, focused on blockchain and account abstraction.
 
-## What's inside?
 
-### Apps and Packages
+## Project Structure
 
-- `demo-app`: a [Next.js](https://nextjs.org/) app with [Tailwind CSS](https://tailwindcss.com/)
-- `abstraxion`: account abstraction react package built for XION
-- `constants`: utility package for shared constants
-- `signers`: utility package for account abstraction classes built on top of cosmjs
-- `ui`: a React component library with [Tailwind CSS](https://tailwindcss.com/)
-- `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `tsconfig`: `tsconfig.json`s used throughout the monorepo
+This monorepo is organized into two main directories:
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+### Apps
 
-### Building packages/ui
+- `demo-app`: A Next.js application featuring Tailwind CSS for styling
 
-This example is setup to build `packages/ui` and output the transpiled source and compiled styles to `dist/`. This was chosen to make sharing one `tailwind.config.js` as easy as possible, and to ensure only the CSS that is used by the current application and its dependencies is generated.
+### Packages
 
-Another option is to consume `packages/ui` directly from source without building. If using this option, you will need to update your `tailwind.config.js` to be aware of your package locations, so it can find all usages of the `tailwindcss` class names.
+- `abstraxion`: A React package for account abstraction on XION
+- `constants`: Utility package for shared constants
+- `signers`: Utility package for account abstraction classes built on cosmjs
+- `ui`: A React component library with Tailwind CSS
+- `eslint-config-custom`: Custom ESLint configurations
+- `tsconfig`: TypeScript configuration files
 
-For example, in [tailwind.config.js](packages/tailwind-config/tailwind.config.js):
+## Features
 
-```js
-  content: [
-    // app content
-    `src/**/*.{js,ts,jsx,tsx}`,
-    // include packages if not transpiling
-    "../../packages/**/*.{js,ts,jsx,tsx}",
-  ],
+- TypeScript for type safety
+- Next.js for modern React applications
+- Tailwind CSS for styling
+- Account abstraction support
+- Modular and reusable components
+- ESLint and Prettier for code quality
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (LTS version)
+- pnpm (package manager)
+
+### Installation
+
+1. Clone the repository
+2. Install dependencies:
+```bash
+pnpm install
 ```
 
-### Utilities Used
+### Development
 
-This Turborepo has some additional tools already setup for you:
+Run the development server:
+```bash
+pnpm dev
+```
 
-- [Tailwind CSS](https://tailwindcss.com/) for styles
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
+### Building Packages
+
+The UI package can be built using:
+```bash
+pnpm build
+```
+
+This will output the transpiled source and compiled styles to the `dist/` directory.
+
+### Alternative: Using Source Directly
+
+If you prefer to use the packages directly from source without building, update your `tailwind.config.js` to include package locations:
+
+```javascript
+content: [
+  // app content
+  `src/**/*.{js,ts,jsx,tsx}`,
+  // include packages if not transpiling
+  "../../packages/**/*.{js,ts,jsx,tsx}",
+],
+```
+
+## Utilities
+
+The project includes several development utilities:
+
+- [Tailwind CSS](https://tailwindcss.com/) for styling
+- [TypeScript](https://www.typescriptlang.org/) for type checking
 - [ESLint](https://eslint.org/) for code linting
 - [Prettier](https://prettier.io) for code formatting
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a new Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details
