@@ -9,19 +9,26 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@burnt-labs/abstraxion": "^1.0.0-alpha.59",
+    "@burnt-labs/abstraxion-core": "1.0.0-alpha.54",
+    "@burnt-labs/ui": "0.1.0-alpha.17",
+    "@cosmjs/cosmwasm-stargate": "^0.33.1",
+    "@heroicons/react": "^2.2.0",
+    "next": "15.2.4",
+    "outline": "link:@heroicons/react/24/outline",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "next": "15.2.4"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
     "eslint": "^9",
     "eslint-config-next": "15.2.4",
-    "@eslint/eslintrc": "^3"
-  }
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  },
+  "packageManager": "pnpm@10.7.0+sha512.6b865ad4b62a1d9842b61d674a393903b871d9244954f652b8842c2b553c72176b278f64c463e52d40fff8aba385c235c8c9ecf5cc7de4fd78b8bb6d49633ab6"
 }
